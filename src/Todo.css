@@ -1,0 +1,273 @@
+body {
+  background-color: #151225;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;            
+}
+
+body::-webkit-scrollbar-track {
+  background: #151225;     
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(46, 46, 46);   
+  border-radius: 20px;   
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px; 
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 900px;
+  min-width: 400px;
+  background-color: #221f3354;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.432);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.addButton {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  background-color: #a599c9;
+  color: black;
+  border-radius: 5px;
+}
+
+.addButton:hover {
+  background-color: #d6d2ec;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.addButton:not(:hover) {
+  transition: 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #a599c9;
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #a599c9;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.card {
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.432);
+}
+
+.buttonDone, .buttonDelete, .buttonEdit, .buttonSave, .buttonCancel {
+  background-color: #a599c9;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+}
+
+.buttonDone:hover, .buttonDelete:hover, .buttonEdit:hover, .buttonSave:hover, .buttonCancel:hover {
+  background-color: #d6d2ec;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.buttonDone:not(:hover), .buttonDelete:not(:hover), .buttonEdit:not(:hover),
+.buttonSave:not(:hover), .buttonCancel:hover:not(:hover) {
+  transition: 0.3s;
+}
+
+.buttonsCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+  width: auto;
+}
+
+.doneImage, .undoneImage, .deleteImage, .editImage, .saveImage, .cancelImage {
+  width: 25px;
+  height: 25px;
+}
+
+.editButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+#text {
+  max-width: 450px;
+}
+
+.editInput {
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  background-color: #bfbacf;
+  font-size: 20px;
+  resize: vertical;
+  width: 400px;
+  min-height: 45px;
+}
+
+.editInput:focus {
+  box-shadow: 0 0 0 0;
+  outline: 1px solid rgba(0, 0, 0, 0.452);
+}
+
+.editInput, .cardModal input .cardModal form button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+button {
+  text-align: center;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardModal {
+  padding: 20px;
+  background-color: #a599c9;
+  border-radius: 3px;
+}
+
+.cardModal form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardModal input {
+  padding: 3px;
+  font-size: 16px;
+  width: 60%;
+  margin-right: 5%;
+  border-radius: 3px;
+  border: none;
+  background-color: #bfbacf;
+}
+
+.cardModal input:focus {
+  outline: 2px solid #2e2647;
+}
+
+.cardModal form button {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  background-color: #bfbacf;
+  cursor: pointer;
+}
+
+.cardModal form button:hover {
+  background-color: #826ebe;
+  transition: 0.5s;
+}
+
+.cardModal form button:not(:hover) {
+  transition: 0.5s;
+}
+
+.hideModal {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .editButtons, .buttonsCard {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+} 
+
+@media (max-width: 590px) {
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+} 
+
+@media (max-width: 377px) {
+  .container {
+    max-width: 250px;
+    min-width: 150px;
+  }
+
+  span {
+    font-size: 15px;
+  }
+} 
