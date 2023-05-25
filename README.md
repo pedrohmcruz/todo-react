@@ -19,4 +19,4 @@
 
 <h2>🖼️ Demonstração da aplicação</h2>
 
-https://github.com/pedrohmcruz/todo-react/assets/96451066/cb3efc1e-b7b0-441d-8ad1-7a075bce3885
+https://github.com/pedrohmcruz/todo-react/assets/96451066/76d7272d-18bf-411c-8551-8015242023d8
